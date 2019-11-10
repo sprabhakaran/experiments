@@ -1,4 +1,6 @@
 
-var msg:string = "Hello"
+var msg:string = "Hello";
 
 console.log(msg);
+
+
