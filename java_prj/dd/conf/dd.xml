@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dd name="office_management">
+
+    <table name="Person">
+        <columns>
+            <column name="ID">
+            </column>
+        </columns>
+    </table>
+
+</dd>
