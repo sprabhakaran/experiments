@@ -5,8 +5,61 @@
     <table name="Person">
         <columns>
             <column name="ID">
+                <description>Id of the person</description>
+                <type>int</type>
+                <nullable>false</nullable>
             </column>
+
+            <column name="NAME">
+                <description>Name of the person</description>
+                <type>char</type>
+                <mx-size>100</mx-size>
+                <nullable>false</nullable>
+            </column>
+
         </columns>
+
+        <pk name="Person_pk">
+            <column>ID</column>
+        </pk>
+    </table>
+
+    <table name="Team">
+        <columns>
+            <column name="ID">
+                <description>Id of the team</description>
+                <type>int</type>
+                <nullable>false</nullable>
+            </column>
+
+            <column name="PERSON_ID">
+                <description>Id of the person</description>
+                <type>int</type>
+                <nullable>false</nullable>
+            </column>
+
+            <column name="NAME">
+                <description>Name of the person</description>
+                <type>char</type>
+                <mx-size>100</mx-size>
+                <nullable>false</nullable>
+            </column>
+
+        </columns>
+
+        <pk name="Person_pk">
+            <column>ID</column>
+        </pk>
+
+        <fks>
+            <fk name="Team_fk" ref-table-name="Person">
+                <columns>
+                    <local-column>PERSON_ID</local-column>
+                    <ref-column>ID</ref-column>
+                </columns>
+            </fk>
+        </fks>
+
     </table>
 
 </dd>

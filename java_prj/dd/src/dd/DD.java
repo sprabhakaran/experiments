@@ -1,4 +1,4 @@
-
+package dd;
 public interface DD {
     public String getName();
 
