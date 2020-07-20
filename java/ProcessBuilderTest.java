@@ -1,6 +1,6 @@
 // Java code illustrating environment() method 
-import java.io.*; 
-import java.util.*; 
+import java.io.*;
+import java.util.*;
 class ProcessBuilderTest
 { 
 	public static void main(String[] arg) throws IOException 
@@ -21,6 +21,11 @@ class ProcessBuilderTest
 		
 			
 	} 
+
+  private static String getString(){
+    System.out.println("Hello I'm ready!");
+    return "Yes I'm ready!";
+  }
 } 
 
 

@@ -1,0 +1,44 @@
+<!-- Created by http://plumbr.eu team -->
+<project name="sizeofagent" default="test">
+
+	<target name="init">
+		<tstamp />
+		<mkdir dir="build" />
+	</target>
+
+	<target name="compile" depends="init" description="Recompile the source code and package it as JAR file.">
+		<javac srcdir="src" source="1.5" target="1.5" destdir="build" includeantruntime="false" />
+		<copy todir="build/META-INF">
+			<fileset dir="src/META-INF" />
+		</copy>
+		<jar jarfile="sizeofagent.jar" basedir="build" filesetmanifest="merge" />
+	</target>
+
+	<target name="clean" description="Remove generated code.">
+		<delete dir="build" />
+	</target>
+
+	<target name="test64-UseCompressedOops" description="Run a test on 64bit architecture with -XX:-UseCompressedOops flag.">
+		<java classname="eu.plumbr.sizeof.test.SizeOfSample" fork="true">
+			<jvmarg value="-XX:-UseCompressedOops" />
+			<jvmarg value="-javaagent:sizeofagent.jar" />
+		</java>
+	</target>
+
+	<target name="test64+UseCompressedOops" description="Run a test on 64bit architecture with -XX:-UseCompressedOops flag.">
+		<java classname="eu.plumbr.sizeof.test.SizeOfSample" fork="true">
+			<jvmarg value="-XX:+UseCompressedOops" />
+			<jvmarg value="-javaagent:sizeofagent.jar" />
+		</java>
+	</target>
+
+	<target name="test32" description="Run a test on 32bit architecture (or enforcing a 64bit environment to behave like a 32bit).">
+		<java classname="eu.plumbr.sizeof.test.SizeOfSample" fork="true">
+			<jvmarg value="-javaagent:sizeofagent.jar" />
+			<jvmarg value="-d32" />
+		</java>
+	</target>
+
+	<target name="test" depends="test32,test64+UseCompressedOops,test64-UseCompressedOops" description="Run all tests on 32bit and 64bit platforms.">
+	</target>
+</project>

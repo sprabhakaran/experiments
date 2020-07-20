@@ -1,0 +1,15 @@
+Java HotSpot(TM) 64-Bit Server VM (25.121-b13) for linux-amd64 JRE (1.8.0_121-b13), built on Dec 12 2016 16:36:53 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+Memory: 4k page, physical 16301320k(5076408k free), swap 0k(0k free)
+CommandLine flags: -XX:+DisableExplicitGC -XX:GCLogFileSize=2048000 -XX:InitialHeapSize=260821120 -XX:MaxHeapSize=4173137920 -XX:NumberOfGCLogFiles=5 -XX:+PrintGC -XX:+PrintGCApplicationConcurrentTime -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseGCLogFileRotation -XX:+UseParallelGC 
+2019-06-05T17:17:48.965+0530: 4.070: Application time: 4.0070165 seconds
+2019-06-05T17:17:48.965+0530: 4.071: Total time for which application threads were stopped: 0.0000681 seconds, Stopping threads took: 0.0000313 seconds
+Heap
+ PSYoungGen      total 74752K, used 7467K [0x000000076d180000, 0x0000000772480000, 0x00000007c0000000)
+  eden space 64512K, 11% used [0x000000076d180000,0x000000076d8cacc0,0x0000000771080000)
+  from space 10240K, 0% used [0x0000000771a80000,0x0000000771a80000,0x0000000772480000)
+  to   space 10240K, 0% used [0x0000000771080000,0x0000000771080000,0x0000000771a80000)
+ ParOldGen       total 171008K, used 0K [0x00000006c7400000, 0x00000006d1b00000, 0x000000076d180000)
+  object space 171008K, 0% used [0x00000006c7400000,0x00000006c7400000,0x00000006d1b00000)
+ Metaspace       used 2491K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 268K, capacity 386K, committed 512K, reserved 1048576K
+2019-06-05T20:45:53.267+0530: 12488.372: Application time: 12484.3018194 seconds

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2014-07-29T10:18:50</date>
+  <millis>1406609330402</millis>
+  <sequence>0</sequence>
+  <logger>MultipleHandlers</logger>
+  <level>WARNING</level>
+  <class>MultipleHandlers</class>
+  <method>main</method>
+  <thread>10</thread>
+  <message>Output to multiple handlers</message>
+</record>
+</log>

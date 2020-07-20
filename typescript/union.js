@@ -11,4 +11,5 @@ arr[1] = "";
 arr[2] = new Date().getMilliseconds();
 arr[3] = 4;
 arr[4] = 34;
+arr[5] = r2;
 console.log(arr);
